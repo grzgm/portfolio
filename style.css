@@ -50,6 +50,7 @@ nav {
     padding: 0 12rem;
     justify-content: space-between;
     align-items: center;
+    z-index: 10;
 }
 
 .nav-logo {
@@ -276,6 +277,43 @@ nav {
     width: 100%;
 }
 
+/* CONTACT SECTION */
+
+#contact-section{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-section .section-title {
+    margin-bottom: 4.5rem;
+}
+
+.contact-section__wrapper{
+
+}
+
+.contact-section__wrapper__email-container{
+    margin-bottom: 3.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem
+}
+
+.contact-section__wrapper__email-container__email{
+}
+
+.contact-section__wrapper__email-container__copy-button{
+    width: 1.5rem;
+}
+
+.contact-section__wrapper__other-platforms-container{
+    display: flex;
+    gap: 3rem
+}
+
 /* TYPOGRAPHY */
 
 .title {
@@ -379,7 +417,19 @@ nav {
     padding: 0.25rem 1.5rem;
     justify-content: center;
     align-items: center;
-    background-color: var(--light-mode-background);
     border-radius: 4rem;
     border: 0.125rem solid #000;
+    background-color: var(--light-mode-background);
+    text-decoration: none;
+}
+
+.button--large{
+    display: flex;
+    padding: 0.5rem 2.5rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4rem;
+    border: 0.125rem solid #000;
+    background-color: var(--light-mode-background);
+    text-decoration: none;
 }
