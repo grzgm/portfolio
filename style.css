@@ -1,0 +1,147 @@
+:root {
+    /* Color styles */
+    --light-mode-text: rgba(4, 3, 22, 1);
+    --light-mode-background: rgba(251, 251, 249, 1);
+    --light-mode-primary: rgba(39, 192, 54, 1);
+    --light-mode-secondary: rgba(187, 238, 190, 1);
+    --light-mode-accent: rgba(27, 126, 35, 1);
+    --test-green: rgba(92, 209, 94, 1);
+    --test-purple: rgba(188, 161, 254, 1);
+
+    --experience-card-white: #FBFBF9;
+    --experience-card-silver: #F1F2FA;
+
+    /* Text-size styles */
+    /* base size: text (32px) */
+    --title: 4rem;
+    --heading: 4rem;
+    --text: 2rem;
+    --heading-2: 3rem;
+    --text-2: 1.75rem;
+    --heading-3: 2.25rem;
+    --text-3: 1.5rem;
+    --text-4: 1.2rem;
+    --text-hyper-link: 2rem;
+
+    /* Effect styles */
+    --background-gradient-blur-shadows: ;
+    --background-gradient-blur-blur: blur(200px);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-mode-background);
+}
+
+main {
+    margin: 0 12rem;
+}
+
+/* TYPOGRAPHY */
+
+.title {
+    color: #000;
+    /* title */
+    font-family: "B612 Mono";
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 400;
+    /* 125% */
+    line-height: 5rem;
+}
+
+.heading-1 {
+    color: #000;
+    /* heading */
+    font-family: Lato;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 600;
+    /* 125% */
+    line-height: 5rem;
+}
+
+.text-1 {
+    color: #000;
+
+    /* text */
+    font-family: Rubik;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    /* 3rem */
+    line-height: 150%;
+}
+
+.heading-2 {
+    color: #000;
+
+    /* heading-2 */
+    font-family: Lato;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 600;
+    /* 133.333% */
+    line-height: 4rem;
+}
+
+.text-2 {
+    color: #000;
+
+    /* text-2 */
+    font-family: Rubik;
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 400;
+    /* 2.625rem */
+    line-height: 150%;
+}
+
+.heading-3 {
+    color: #000;
+
+    /* heading-3 */
+    font-family: Lato;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 600;
+    /* 133.333% */
+    line-height: 3rem;
+}
+
+.text-3 {
+    color: #000;
+
+    /* text-3 */
+    font-family: Rubik;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    /* 2.25rem */
+    line-height: 150%;
+}
+
+.text-4 {
+    color: #000;
+
+    /* text-4 */
+    font-family: Rubik;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    /* 1.875rem */
+    line-height: 150%;
+}
+
+/* REUSABLE COMPONENTS */
+
+.button {
+    display: flex;
+    padding: 0.25rem 1.5rem;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-mode-background);
+    border-radius: 4rem;
+    border: 0.125rem solid #000;
+}
