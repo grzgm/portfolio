@@ -38,6 +38,52 @@ main {
     margin: 0 12rem;
 }
 
+/* NAVBAR */
+
+nav {
+    position: absolute;
+    top: 0;
+    display: flex;
+    height: 6rem;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 0 12rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    width: 8rem;
+    height: 8rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-content__menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-content__menu-container__text {}
+
+.nav-content__menu-container__button {
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0;
+}
+
+.nav-content__contact-button {}
+
 /* TYPOGRAPHY */
 
 .title {
