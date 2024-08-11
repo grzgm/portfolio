@@ -290,9 +290,9 @@ nav {
 .skills-section__skill-container{
     margin: 0 15%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(195px, auto));
+    grid-template-columns: repeat(auto-fill, minmax(10rem, auto));
     grid-auto-rows: auto;
-    gap: 5rem;
+    gap: 2rem;
     justify-items: center;
 }
 
@@ -323,7 +323,7 @@ nav {
 }
 
 .skill-card__description{
-
+    margin-top: 0.75rem;
 }
 
 /* CONTACT SECTION */
@@ -452,7 +452,7 @@ nav {
 
     /* heading-4 */
     font-family: Lato;
-    font-size: 1.75rem;
+    font-size: 1.25rem;
     font-style: normal;
     font-weight: 600;
     line-height: 135%;
