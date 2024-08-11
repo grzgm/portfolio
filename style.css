@@ -1,3 +1,4 @@
+/* GLOBAL SETTINGS */
 :root {
     /* Color styles */
     --light-mode-text: rgba(4, 3, 22, 1);
@@ -26,6 +27,9 @@
     /* Effect styles */
     --background-gradient-blur-shadows: ;
     --background-gradient-blur-blur: blur(200px);
+
+    /* Sizes */
+    --main-side-padding: 12rem;
 }
 
 html, body {
@@ -35,7 +39,19 @@ html, body {
 }
 
 main {
-    margin: 0 12rem;
+    margin: 0 var(--main-side-padding);
+}
+
+@media (max-width: 60rem) {
+    :root{
+        --main-side-padding: 6rem;
+    }
+}
+
+@media (max-width: 37.5rem) {
+    :root{
+        --main-side-padding: 4rem;
+    }
 }
 
 /* NAVBAR */
@@ -47,7 +63,7 @@ nav {
     height: 6rem;
     width: 100vw;
     box-sizing: border-box;
-    padding: 0 12rem;
+    padding: 0 var(--main-side-padding);
     justify-content: space-between;
     align-items: center;
     z-index: 10;
@@ -122,12 +138,12 @@ nav {
     right: 0;
 }
 
-.hero-section__first-name{
+.hero-section__name__first-name{
     position: relative;
     right: 5.25rem;
 }
 
-.hero-section__surname{
+.hero-section__name__surname{
     float: right;
 }
 
@@ -137,7 +153,40 @@ nav {
     bottom: 10rem;
 }
 
+@media (max-width: 70rem) {
+    #hero-section{
+        padding-top: 10rem;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 7.5rem;
+    }
+
+    .hero-section__name{
+        position: relative;
+        top: auto;
+        right: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+    
+    .hero-section__name__surname{
+        float: unset;
+    }
+    
+    .hero-section__text{
+        width: auto;
+        position: static;
+    }
+
+    .title{
+        font-size: 3rem;
+    }
+}
+
 /* EXPERIENCE SECTION */
+
 #experience-section{
 
 }
@@ -490,6 +539,12 @@ nav {
     font-weight: 400;
     /* 1.875rem */
     line-height: 150%;
+}
+
+@media (max-width: 60rem) {
+    .title{
+        font-size: 3.5rem;
+    }
 }
 
 /* REUSABLE COMPONENTS */
