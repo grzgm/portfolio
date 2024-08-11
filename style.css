@@ -84,6 +84,36 @@ nav {
 
 .nav-content__contact-button {}
 
+/* HERO SECTION */
+
+.hero-section{
+    height: 100vh;
+    min-height: 50rem;
+    max-height: 70rem;
+    position: relative;
+}
+
+.hero-section__name{
+    position: absolute;
+    top: 12rem;
+    right: 0;
+}
+
+.hero-section__first-name{
+    position: relative;
+    right: 5.25rem;
+}
+
+.hero-section__surname{
+    float: right;
+}
+
+.hero-section__text{
+    position: absolute;
+    width: 45rem;
+    bottom: 10rem;
+}
+
 /* TYPOGRAPHY */
 
 .title {
