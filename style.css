@@ -85,9 +85,31 @@ nav {
 
 .nav-content__contact-button {}
 
+/* SIDEBAR */
+
+#side-bar{
+    padding: 2rem;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-radius: var(--32, 2rem) var(--0, 0rem) var(--0, 0rem) var(--32, 2rem);
+    background: linear-gradient(332deg, #FFF 4.75%, #FBFBF9 92.55%);
+    box-shadow: -5px 5px 20px 0px rgba(0, 0, 0, 0.15);
+    transform: translate(0, -50%);
+    z-index: 15;
+}
+
+.side-bar__option{
+    padding: 0.25rem 0;
+    text-decoration: none;
+}
+
 /* HERO SECTION */
 
-.hero-section{
+#hero-section{
     height: 100vh;
     min-height: 50rem;
     max-height: 70rem;
@@ -116,11 +138,11 @@ nav {
 }
 
 /* EXPERIENCE SECTION */
-.experience-section{
+#experience-section{
 
 }
 
-.experience-section .section-title {
+#experience-section .section-title {
     margin-bottom: 6rem;
 }
 
@@ -191,7 +213,7 @@ nav {
 
 /* WORK SECTION */
 
-.work-section{
+#work-section{
 }
 
 .work-section__columns{
