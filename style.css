@@ -277,6 +277,55 @@ nav {
     width: 100%;
 }
 
+/* SKILLS SECTION */
+#skills-section{
+    container-type: inline-size;
+    container-name: skill-container;
+}
+
+#skills-section .section-title{
+    margin-bottom: 6rem;
+}
+
+.skills-section__skill-container{
+    margin: 0 15%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(195px, auto));
+    grid-auto-rows: auto;
+    gap: 5rem;
+    justify-items: center;
+}
+
+.skill-card{
+    width: 100%;
+    max-width: 250px;
+    aspect-ratio: 1;
+    padding: 0 3rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    background-color: #ffffff;
+    box-shadow: -1px 0px 10px 0px rgba(0, 0, 0, 0.10), 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+@container skill-container (max-width: 700px) {
+    .skills-section__skill-container {
+        margin: 0;
+    }
+  }
+  
+
+.skill-card__img{
+    width: 100%;
+}
+
+.skill-card__description{
+
+}
+
 /* CONTACT SECTION */
 
 #contact-section{
@@ -396,6 +445,17 @@ nav {
     font-weight: 400;
     /* 2.25rem */
     line-height: 150%;
+}
+
+.heading-4 {
+    color: #000;
+
+    /* heading-4 */
+    font-family: Lato;
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 135%;
 }
 
 .text-4 {
