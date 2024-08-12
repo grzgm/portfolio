@@ -1,0 +1,24 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    
+    - name: Set up SSH
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan -H ${{ secrets.VPS_IP }} >> ~/.ssh/known_hosts
+    
+    - name: Pull Repository on Server
+      run: |
+        ssh -o StrictHostKeyChecking=no -T github-portfolio@${{ secrets.VPS_IP }} "cd /var/www/my-web-server/portfolio && git pull origin main"
