@@ -94,6 +94,7 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+    cursor: pointer;
 }
 
 .nav-content__menu-container__text {}
@@ -112,7 +113,7 @@ nav {
     padding: 1.5rem;
     position: fixed;
     top: 50%;
-    right: 0;
+    right: -100%;
     display: none;
     flex-direction: column;
     gap: 0.5rem;
@@ -121,6 +122,12 @@ nav {
     box-shadow: -5px 5px 20px 0px rgba(0, 0, 0, 0.15);
     transform: translate(0, -50%);
     z-index: 15;
+    transition: right 0.3s ease;
+}
+
+#side-bar.side-bar--show {
+    display: flex;
+    right: 0;
 }
 
 .side-bar__option{
