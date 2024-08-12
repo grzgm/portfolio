@@ -42,6 +42,23 @@ main {
     }
 }
 
+/* REUSABLE COMPONENTS */
+
+.button {
+    display: flex;
+    padding: 0.25rem 1.25rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3.25rem;
+    border: 0.125rem solid #000;
+    background-color: var(--light-mode-background);
+    text-decoration: none;
+}
+
+.button--large{
+    padding: 0.5rem 2.25rem;
+}
+
 /* NAVBAR */
 
 nav {
@@ -427,6 +444,7 @@ nav {
 #skills-section{
     container-type: inline-size;
     container-name: skill-container;
+    margin-bottom: 2rem;
 }
 
 #skills-section .section-title{
@@ -529,8 +547,43 @@ nav {
     gap: 2.5rem
 }
 
-@media (max-width: 47.5rem) {
+@media (max-width: 42.5rem) {
+    #contact-section .section-title {
+        text-align: center;
+    }
 
+    .contact-section__wrapper__email-container{
+        justify-content: center;
+    }
+
+    .contact-section__wrapper__email-container__email.text-1{
+        font-size: 1.25rem;
+    }
+
+    .contact-section__wrapper__other-platforms-container{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem
+    }
+
+    .contact-section__wrapper__other-platforms-container.button--large{
+        padding: 0.25rem 1.25rem;
+    }
+
+    .button--large{
+        padding: 0.25rem 1.25rem;
+    }
+}
+
+@media (max-width: 30rem) {
+    .contact-section__wrapper__email-container__email.text-1{
+        font-size: 1rem;
+    }
+
+    .button--large.text-2{
+        font-size: 1rem;
+    }
 }
 
 /* TYPOGRAPHY */
@@ -636,28 +689,4 @@ nav {
     .title{
         font-size: 2.75rem;
     }
-}
-
-/* REUSABLE COMPONENTS */
-
-.button {
-    display: flex;
-    padding: 0.25rem 1.25rem;
-    justify-content: center;
-    align-items: center;
-    border-radius: 3.25rem;
-    border: 0.125rem solid #000;
-    background-color: var(--light-mode-background);
-    text-decoration: none;
-}
-
-.button--large{
-    display: flex;
-    padding: 0.5rem 2.25rem;
-    justify-content: center;
-    align-items: center;
-    border-radius: 3.25rem;
-    border: 0.125rem solid #000;
-    background-color: var(--light-mode-background);
-    text-decoration: none;
 }
