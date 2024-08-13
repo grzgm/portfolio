@@ -116,3 +116,20 @@ document.querySelectorAll(".experience-card").forEach((card) => {
     card.style.background = "";
   });
 });
+
+// Skill card animation
+document.querySelectorAll(".skill-card").forEach((card) => {
+  card.addEventListener("mouseenter", (e) => {
+    console.log(card.style.backgroundColor);
+    card.style.transition = "none";
+    card.style.backgroundColor = "rgb(255, 255, 255, 0)";
+    card.style.boxShadow = "0 0 0 rgba(0, 0, 0, 0.10), 0 0 0 rgba(0, 0, 0, 0.25), inset 5px 5px 10px rgba(0, 0, 0, 0.25)";
+  });
+
+  card.addEventListener("mouseleave", () => {
+    // Reset background when the mouse leaves the card
+    card.style.transition = "";
+    card.style.background = "";
+    card.style.boxShadow = "";
+  });
+});
