@@ -386,7 +386,6 @@ nav {
     flex: 50%;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .work-section__columns__column div:last-child{
@@ -394,15 +393,21 @@ nav {
 }
 
 .work-section__columns__column-1{
+    align-items: end;
     margin-right: 4.75rem;
 }
 
 .work-section__columns__column-2{
+    align-items: start;
     margin-left: 4.75rem;
 }
 
 .work-section__columns__column-1__text{
     margin-bottom: 4.75rem;
+}
+
+.work-section__columns__column-1__text__link{
+    color: var(--light-mode-text)
 }
 
 .project-card{
@@ -434,6 +439,13 @@ nav {
     width: 100%;
     margin-bottom: 1.25rem;
     border-radius: 0.75rem 0.75rem 0 0;
+}
+
+.citric-labs{
+    height: 15rem;
+    width: auto;
+    padding: 0 calc(50% - 7.5rem);
+    background: linear-gradient(270deg, #FF914D 0%, #FFDE59 100%);
 }
 
 .project-card__content{
@@ -483,7 +495,8 @@ nav {
     .work-section__columns__column {
         max-width: 100%;
         margin:0;
-        flex: 100%
+        flex: 100%;
+        align-items: center;
     }
     
     .work-section__columns__column-1{
