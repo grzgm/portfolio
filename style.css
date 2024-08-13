@@ -476,11 +476,13 @@ nav {
     padding: 0.125rem 0.5rem;
     border-radius: 0.5rem;
     border: 0.125rem solid #000;
+    word-break: keep-all;
 }
 
 .project-card__content__bottom-row__link{
     width: 1.5rem;
     height: 1.5rem;
+    margin-left: 0.75rem;
     display: block;
 }
 
