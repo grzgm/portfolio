@@ -606,6 +606,7 @@ nav {
 
 .contact-section__wrapper__email-container__copy-button{
     width: 1.25rem;
+    transition: transform 0.2s ease-out;
 }
 
 .contact-section__wrapper__other-platforms-container{

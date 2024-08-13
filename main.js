@@ -50,3 +50,16 @@ document.addEventListener("click", (event) => {
     }, 300); // Wait for animation to complete before hiding
   }
 });
+
+// Copy email to clipboard
+const emailCopyButton = document.querySelector(
+  ".contact-section__wrapper__email-container__copy-button"
+);
+
+emailCopyButton.addEventListener("click", async () => {
+  await navigator.clipboard.writeText("grzegorzmalisz02@gmail.com");
+  emailCopyButton.style.transform = "scale(1.2)";
+  setTimeout(() => {
+    emailCopyButton.style.transform = "";
+  }, 200); // Wait for animation to complete before hiding
+});
