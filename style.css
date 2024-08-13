@@ -294,14 +294,14 @@ nav {
     align-items: flex-end;
     justify-self: end;
     grid-column: 1;
-    background: linear-gradient(280deg, var(--experience-card-white) 0.54%, var(--experience-card-silver) 99.46%);
+    background: linear-gradient(280deg, var(--experience-card-white) 0%, var(--experience-card-silver) 100%);
     box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.25);
 }
 
 .experience-card--right{
     align-items: flex-start;
     grid-column: 3;
-    background: linear-gradient(99deg, var(--experience-card-white) 0.54%, var(--experience-card-silver) 99.46%);
+    background: linear-gradient(99deg, var(--experience-card-white) 0%, var(--experience-card-silver) 100%);
     box-shadow: -5px 5px 15px 0px rgba(0, 0, 0, 0.25);
 }
 

@@ -94,3 +94,25 @@ projectCards.forEach((projectCard) => {
     projectCard.style.filter = `brightness(1)`;
   });
 });
+
+// Experience card gradient animation
+document.querySelectorAll(".experience-card").forEach((card) => {
+  card.addEventListener("mousemove", (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left; // Get x position within the card
+    const y = e.clientY - rect.top; // Get y position within the card
+
+    // Calculate the angle based on mouse position
+    const angle =
+      Math.atan2(y - rect.height / 2, x - rect.width / 2) * (180 / Math.PI) +
+      90;
+
+    // Update the gradient with the new angle
+    card.style.background = `linear-gradient(${angle}deg, var(--experience-card-white) 0%, var(--experience-card-silver) 100%)`;
+  });
+
+  card.addEventListener("mouseleave", () => {
+    // Reset the gradient when the mouse leaves the card
+    card.style.background = "";
+  });
+});
