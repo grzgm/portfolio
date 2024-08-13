@@ -123,7 +123,7 @@ document.querySelectorAll(".skill-card").forEach((card) => {
     console.log(card.style.backgroundColor);
     card.style.transition = "none";
     card.style.backgroundColor = "rgb(255, 255, 255, 0)";
-    card.style.boxShadow = "0 0 0 rgba(0, 0, 0, 0.10), 0 0 0 rgba(0, 0, 0, 0.25), inset 5px 5px 10px rgba(0, 0, 0, 0.25)";
+    card.style.boxShadow = "0 0 0 rgba(0, 0, 0, 0.10), 0 0 0 rgba(0, 0, 0, 0.25), inset 5px 5px 10px rgba(0, 0, 0, 0.25), inset -3px -3px 5px rgb(255, 255, 255)";
   });
 
   card.addEventListener("mouseleave", () => {
