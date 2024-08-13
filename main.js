@@ -63,3 +63,34 @@ emailCopyButton.addEventListener("click", async () => {
     emailCopyButton.style.transform = "";
   }, 200); // Wait for animation to complete before hiding
 });
+
+// Project cards animation
+const projectCards = document.querySelectorAll(".project-card");
+
+projectCards.forEach((projectCard) => {
+  projectCard.addEventListener("mousemove", (e) => {
+    const rect = projectCard.getBoundingClientRect();
+    const x = e.clientX - rect.left; // Get x position within the card
+    const y = e.clientY - rect.top; // Get y position within the card
+
+    // Calculate rotation angles based on cursor position
+    const xRotation = (y / rect.height - 0.5) * 30; // Rotate between -15deg to 15deg
+    const yRotation = (x / rect.width - 0.5) * -30; // Rotate between -15deg to 15deg
+
+    // Calculate brightness level based on cursor position
+    const brightnessMax = 1.1;
+    const brightnessMin = 0.85;
+    const brightnessSlope = (brightnessMax - brightnessMin) / (0 - 1);
+    const brightness = brightnessMin + brightnessSlope * (y / rect.height - 1);
+
+    // Apply the rotation and brightness to the card
+    projectCard.style.transform = `scale(1.1) rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
+    projectCard.style.filter = `brightness(${brightness})`;
+  });
+
+  projectCard.addEventListener("mouseleave", () => {
+    // Reset the card's transform and filter when the cursor leaves
+    projectCard.style.transform = "scale(1)";
+    projectCard.style.filter = `brightness(1)`;
+  });
+});

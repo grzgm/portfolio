@@ -412,6 +412,14 @@ nav {
     flex-direction: column;
     border-radius: 1.25rem;
     background: #FFF;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    transform-style: preserve-3d; /* Allows 3D transform effects */
+    perspective: 1000px; /* Creates a 3D perspective */
+}
+
+.project-card:hover {
+    transform: scale(1.1); /* Scale up to create a "pop-out" effect */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Increase shadow to enhance the effect */
 }
 
 .project-card--left{
