@@ -1,3 +1,26 @@
+// Navbar logic
+const navBar = document.querySelector("nav");
+const navBarGradient = document.querySelector("#gradient-background-nav");
+let prevScrollpos = window.scrollY;
+
+window.addEventListener("scroll", () => {
+  const currentScrollPos = window.scrollY;
+  if (prevScrollpos > currentScrollPos) {
+    navBar.style.top = "0";
+  } else {
+    navBar.style.top = "-100%";
+  }
+  if (currentScrollPos < 100) {
+    navBar.style.backgroundColor = "initial";
+    navBarGradient.style.opacity = "0";
+  } else {
+    navBar.style.backgroundColor = "";
+    navBarGradient.style.opacity = "0.75";
+  }
+  prevScrollpos = currentScrollPos;
+});
+
+// Sidebar logic
 const menuContainer = document.querySelector(".nav-content__menu-container");
 const sideBar = document.getElementById("side-bar");
 
