@@ -409,7 +409,7 @@ nav {
 }
 
 .project-card{
-    max-width: 25rem;
+    max-width: min(25rem, 100%);
     margin-bottom: 9.5rem;
     display: flex;
     flex-direction: column;
@@ -440,7 +440,7 @@ nav {
 }
 
 .citric-labs{
-    /* height: 15rem; */
+    height: 15rem;
     width: auto;
     object-fit: contain;
     background: linear-gradient(270deg, #FF914D 0%, #FFDE59 100%);
@@ -527,6 +527,10 @@ nav {
 
 
 @media (max-width: 65rem) {
+    /* .work-section__columns {
+        justify-content: center;
+    } */
+
     .work-section__columns__column {
         max-width: 100%;
         margin:0;
@@ -543,7 +547,6 @@ nav {
     }
 
     .project-card{
-        max-width: 100%;
         margin-bottom: 4rem;
     }
 
