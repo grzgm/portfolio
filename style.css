@@ -440,9 +440,9 @@ nav {
 }
 
 .citric-labs{
-    height: 15rem;
+    /* height: 15rem; */
     width: auto;
-    padding: 0 calc(50% - 7.5rem);
+    object-fit: contain;
     background: linear-gradient(270deg, #FF914D 0%, #FFDE59 100%);
 }
 
@@ -470,6 +470,40 @@ nav {
 .project-card__content__bottom-row__tag-container{
     display: flex;
     gap: 0.75rem;
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+.project-card__content__bottom-row__tag-container--wrapper{
+    max-width: calc(100% - 3rem);
+    position: relative;
+}
+
+/* Fade-out effect for the left side */
+.project-card__content__bottom-row__tag-container--wrapper::before {
+    content: '';
+    visibility: var(--before-visibility, hidden);
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1.5rem;
+    background: linear-gradient(to right, white, transparent);
+    pointer-events: none; /* Allow interaction with tags underneath */
+    z-index: 1;
+}
+
+/* Fade-out effect for the right side */
+.project-card__content__bottom-row__tag-container--wrapper::after {
+    content: '';
+    visibility: var(--after-visibility, visible);
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 1.5rem;
+    background: linear-gradient(to left, white, transparent);
+    pointer-events: none; /* Allow interaction with tags underneath */
 }
 
 .project-card__content__bottom-row__tag-container__tag{
@@ -477,6 +511,7 @@ nav {
     border-radius: 0.5rem;
     border: 0.125rem solid #000;
     word-break: keep-all;
+    white-space: nowrap;
 }
 
 .project-card__content__bottom-row__link{
@@ -508,7 +543,7 @@ nav {
     }
 
     .project-card{
-        max-width: 25rem;
+        max-width: 100%;
         margin-bottom: 4rem;
     }
 

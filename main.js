@@ -95,6 +95,37 @@ projectCards.forEach((projectCard) => {
   });
 });
 
+tagContainerWrappers = document.querySelectorAll(
+  ".project-card__content__bottom-row__tag-container--wrapper"
+);
+
+tagContainerWrappers.forEach((tagContainerWrapper) => {
+  const tagContainer = tagContainerWrapper.querySelector(
+    ".project-card__content__bottom-row__tag-container"
+  );
+  tagContainer.addEventListener("wheel", (event) => {
+    console.log(tagContainer.scrollLeft + tagContainer.clientWidth, tagContainer.scrollWidth);
+    // prevent the page scrolling
+    event.preventDefault();
+
+    // invert the scroll
+    tagContainer.scrollLeft += event.deltaY;
+
+    // add/hide after and before elements
+    if (tagContainer.scrollLeft == 0) {
+      tagContainerWrapper.style.setProperty("--before-visibility", "hidden");
+    } else {
+      tagContainerWrapper.style.setProperty("--before-visibility", "visible");
+    }
+
+    if (tagContainer.scrollLeft + tagContainer.clientWidth >= tagContainer.scrollWidth) {
+      tagContainerWrapper.style.setProperty("--after-visibility", "hidden");
+    } else {
+      tagContainerWrapper.style.setProperty("--after-visibility", "visible");
+    }
+  });
+});
+
 // Experience card gradient animation
 document.querySelectorAll(".experience-card").forEach((card) => {
   card.addEventListener("mousemove", (e) => {
@@ -123,7 +154,8 @@ document.querySelectorAll(".skill-card").forEach((card) => {
     console.log(card.style.backgroundColor);
     card.style.transition = "none";
     card.style.backgroundColor = "rgb(255, 255, 255, 0)";
-    card.style.boxShadow = "0 0 0 rgba(0, 0, 0, 0.10), 0 0 0 rgba(0, 0, 0, 0.25), inset 5px 5px 10px rgba(0, 0, 0, 0.25), inset -3px -3px 5px rgb(255, 255, 255)";
+    card.style.boxShadow =
+      "0 0 0 rgba(0, 0, 0, 0.10), 0 0 0 rgba(0, 0, 0, 0.25), inset 5px 5px 10px rgba(0, 0, 0, 0.25), inset -3px -3px 5px rgb(255, 255, 255)";
   });
 
   card.addEventListener("mouseleave", () => {
