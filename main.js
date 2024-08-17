@@ -65,21 +65,22 @@ emailCopyButton.addEventListener("click", async () => {
 });
 
 // Project cards animation
-const projectCards = document.querySelectorAll(".project-card");
+const projectCardWrappers = document.querySelectorAll(".project-card--wrapper");
 
-projectCards.forEach((projectCard) => {
+projectCardWrappers.forEach((projectCardWrapper) => {
+  const projectCard = projectCardWrapper.querySelector(".project-card");
   projectCard.addEventListener("mousemove", (e) => {
     const rect = projectCard.getBoundingClientRect();
     const x = e.clientX - rect.left; // Get x position within the card
     const y = e.clientY - rect.top; // Get y position within the card
 
     // Calculate rotation angles based on cursor position
-    const xRotation = (y / rect.height - 0.5) * 30; // Rotate between -15deg to 15deg
-    const yRotation = (x / rect.width - 0.5) * -30; // Rotate between -15deg to 15deg
+    const xRotation = (y / rect.height - 0.5) * -30; // Rotate between -15deg to 15deg
+    const yRotation = (x / rect.width - 0.5) * 30; // Rotate between -15deg to 15deg
 
     // Calculate brightness level based on cursor position
     const brightnessMax = 1.1;
-    const brightnessMin = 0.85;
+    const brightnessMin = 0.80;
     const brightnessSlope = (brightnessMax - brightnessMin) / (0 - 1);
     const brightness = brightnessMin + brightnessSlope * (y / rect.height - 1);
 
@@ -90,8 +91,8 @@ projectCards.forEach((projectCard) => {
 
   projectCard.addEventListener("mouseleave", () => {
     // Reset the card's transform and filter when the cursor leaves
-    projectCard.style.transform = "scale(1)";
-    projectCard.style.filter = `brightness(1)`;
+    projectCard.style.transform = "";
+    projectCard.style.filter = "";
   });
 });
 

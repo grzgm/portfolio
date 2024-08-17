@@ -408,16 +408,19 @@ nav {
     color: var(--light-mode-text)
 }
 
-.project-card{
+.project-card--wrapper{
     max-width: min(25rem, 100%);
     margin-bottom: 9.5rem;
+    perspective: 1500px;
+}
+
+.project-card{
     display: flex;
     flex-direction: column;
     border-radius: 1.25rem;
     background: #FFF;
     transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
-    transform-style: preserve-3d; /* Allows 3D transform effects */
-    perspective: 1000px; /* Creates a 3D perspective */
+    transform-style: preserve-3d;
 }
 
 .project-card:hover {
@@ -546,7 +549,7 @@ nav {
         margin-bottom: 2rem;
     }
 
-    .project-card{
+    .project-card--wrapper{
         margin-bottom: 4rem;
     }
 
