@@ -106,7 +106,6 @@ nav {
     padding: 0 var(--main-side-padding);
     justify-content: space-between;
     align-items: center;
-    background-color: var(--light-mode-background);
     transition: top 0.3s;
     z-index: 10;
 }
@@ -121,7 +120,7 @@ nav {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.75;
+    opacity: 0;
     filter: blur(100px);
     transition: opacity 0.3s;
     z-index: -1;

@@ -14,7 +14,7 @@ window.addEventListener("scroll", () => {
     navBar.style.backgroundColor = "initial";
     navBarGradient.style.opacity = "0";
   } else {
-    navBar.style.backgroundColor = "";
+    navBar.style.backgroundColor = "var(--light-mode-background)";
     navBarGradient.style.opacity = "0.75";
   }
   prevScrollpos = currentScrollPos;
