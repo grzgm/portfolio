@@ -60,14 +60,34 @@ main {
 /* REUSABLE COMPONENTS */
 
 .button {
-    display: flex;
     padding: 0.25rem 1.25rem;
+    border: 0.125rem solid #000;
+    position: relative;
+    display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 3.25rem;
-    border: 0.125rem solid #000;
     background-color: var(--light-mode-background);
     text-decoration: none;
+    transition: all 0.3s;
+}
+
+.button::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 3.25rem;
+    background-color: #000;
+    transition: all .4s;
+    z-index: -1;
+}
+
+.button:hover::after {
+    transform: scaleX(1.15) scaleY(1.35);
+    opacity: 0;
 }
 
 .button--large{
