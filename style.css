@@ -36,7 +36,7 @@ main {
     position: fixed;
     width: 100%;
     height: 100%;
-    background-image: url("images/gradient-background.svg");
+    background-image: url("assets/images/gradient-background.svg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -60,14 +60,34 @@ main {
 /* REUSABLE COMPONENTS */
 
 .button {
-    display: flex;
     padding: 0.25rem 1.25rem;
+    border: 0.125rem solid #000;
+    position: relative;
+    display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 3.25rem;
-    border: 0.125rem solid #000;
     background-color: var(--light-mode-background);
     text-decoration: none;
+    transition: all 0.3s;
+}
+
+.button::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 3.25rem;
+    background-color: #000;
+    transition: all .4s;
+    z-index: -1;
+}
+
+.button:hover::after {
+    transform: scaleX(1.15) scaleY(1.35);
+    opacity: 0;
 }
 
 .button--large{
@@ -86,7 +106,6 @@ nav {
     padding: 0 var(--main-side-padding);
     justify-content: space-between;
     align-items: center;
-    background-color: var(--light-mode-background);
     transition: top 0.3s;
     z-index: 10;
 }
@@ -97,11 +116,11 @@ nav {
     width: 100%;
     height: 100%;
     display: block;
-    background-image: url("images/gradient-background.svg");
+    background-image: url("assets/images/gradient-background.svg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.75;
+    opacity: 0;
     filter: blur(100px);
     transition: opacity 0.3s;
     z-index: -1;
@@ -178,6 +197,7 @@ nav {
     height: 100vh;
     min-height: 40rem;
     max-height: 60rem;
+    margin-bottom: 5rem;
     position: relative;
 }
 
@@ -208,6 +228,7 @@ nav {
         height: initial;
         max-height: initial;
         padding: 12rem 0;
+        margin-bottom: 0;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
@@ -246,7 +267,7 @@ nav {
 /* EXPERIENCE SECTION */
 
 #experience-section{
-    margin-bottom: 8rem;
+    margin-bottom: 12rem;
 }
 
 #experience-section .section-title {
@@ -319,6 +340,10 @@ nav {
 }
 
 @media (max-width: 65rem) {
+    #experience-section{
+        margin-bottom: 10rem;
+    }
+
     .experience-card{
         width: 15rem;
     }
@@ -367,7 +392,7 @@ nav {
 /* WORK SECTION */
 
 #work-section{
-    margin-bottom: 8rem;
+    margin-bottom: 12rem;
 }
 
 #work-section .section-title{
@@ -386,7 +411,7 @@ nav {
     flex-direction: column;
 }
 
-.work-section__columns__column div:last-child{
+.work-section__columns__column a:last-child{
     margin-bottom: 0;
 }
 
@@ -408,16 +433,21 @@ nav {
     color: var(--light-mode-text)
 }
 
-.project-card{
+.project-card--wrapper{
     max-width: min(25rem, 100%);
     margin-bottom: 9.5rem;
+    display: block;
+    text-decoration: none;
+    perspective: 1500px;
+}
+
+.project-card{
     display: flex;
     flex-direction: column;
     border-radius: 1.25rem;
     background: #FFF;
     transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
-    transform-style: preserve-3d; /* Allows 3D transform effects */
-    perspective: 1000px; /* Creates a 3D perspective */
+    transform-style: preserve-3d;
 }
 
 .project-card:hover {
@@ -514,22 +544,18 @@ nav {
     white-space: nowrap;
 }
 
-.project-card__content__bottom-row__link{
-    width: 1.5rem;
-    height: 1.5rem;
-    margin-left: 0.75rem;
-    display: block;
-}
-
 .project-card__content__bottom-row__link__img{
-    width: 100%;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: 1rem;
+    display: block;
 }
 
 
 @media (max-width: 65rem) {
-    /* .work-section__columns {
-        justify-content: center;
-    } */
+    #work-section{
+        margin-bottom: 10rem;
+    }
 
     .work-section__columns__column {
         max-width: 100%;
@@ -546,16 +572,12 @@ nav {
         margin-bottom: 2rem;
     }
 
-    .project-card{
+    .project-card--wrapper{
         margin-bottom: 4rem;
     }
 
     .project-card__content__bottom-row__tag-container{
         gap: 0.5rem;
-    }
-
-    .project-card__content__bottom-row__link{
-        margin-left: 1rem;
     }
 }
 
@@ -567,7 +589,7 @@ nav {
 }
 
 #skills-section .section-title{
-    margin-bottom: 4.75rem;
+    margin-bottom: 4rem;
 }
 
 .skills-section__skill-container{
