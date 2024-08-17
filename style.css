@@ -178,6 +178,7 @@ nav {
     height: 100vh;
     min-height: 40rem;
     max-height: 60rem;
+    margin-bottom: 5rem;
     position: relative;
 }
 
@@ -208,6 +209,7 @@ nav {
         height: initial;
         max-height: initial;
         padding: 12rem 0;
+        margin-bottom: 0;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
@@ -246,7 +248,7 @@ nav {
 /* EXPERIENCE SECTION */
 
 #experience-section{
-    margin-bottom: 8rem;
+    margin-bottom: 12rem;
 }
 
 #experience-section .section-title {
@@ -319,6 +321,10 @@ nav {
 }
 
 @media (max-width: 65rem) {
+    #experience-section{
+        margin-bottom: 10rem;
+    }
+
     .experience-card{
         width: 15rem;
     }
@@ -367,7 +373,7 @@ nav {
 /* WORK SECTION */
 
 #work-section{
-    margin-bottom: 8rem;
+    margin-bottom: 12rem;
 }
 
 #work-section .section-title{
@@ -528,9 +534,9 @@ nav {
 
 
 @media (max-width: 65rem) {
-    /* .work-section__columns {
-        justify-content: center;
-    } */
+    #work-section{
+        margin-bottom: 10rem;
+    }
 
     .work-section__columns__column {
         max-width: 100%;
@@ -564,7 +570,7 @@ nav {
 }
 
 #skills-section .section-title{
-    margin-bottom: 4.75rem;
+    margin-bottom: 4rem;
 }
 
 .skills-section__skill-container{
