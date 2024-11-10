@@ -57,7 +57,7 @@ const emailCopyButton = document.querySelector(
 );
 
 emailCopyButton.addEventListener("click", async () => {
-  await navigator.clipboard.writeText("grzegorzmalisz02@gmail.com");
+  await navigator.clipboard.writeText("g.malisz@student.fontys.nl");
   emailCopyButton.style.transform = "scale(1.2)";
   setTimeout(() => {
     emailCopyButton.style.transform = "";
