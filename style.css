@@ -411,7 +411,7 @@ nav {
     flex-direction: column;
 }
 
-.work-section__columns__column a:last-child{
+.work-section__columns__column .project-card--wrapper:last-child{
     margin-bottom: 0;
 }
 
@@ -544,13 +544,86 @@ nav {
     white-space: nowrap;
 }
 
-.project-card__content__bottom-row__link__img{
-    width: 1.25rem;
-    height: 1.25rem;
+.project-card__content__bottom-row__link__img {
+    width: 1.5rem;
+    height: 1.5rem;
     margin-left: 1rem;
     display: block;
 }
 
+#project-card--one-stop-shop {
+    cursor: pointer;
+}
+
+.project-card__content__bottom-row__link-container {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: start;
+    gap: 0.5rem;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out, padding 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+    overflow: hidden;
+    background-color: var(--light-mode-background);
+}
+
+.project-card__content__bottom-row__link-container:hover {
+    width: 7rem;
+    height: 3.25rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    box-shadow: -1px 0px 10px 0px rgba(0, 0, 0, 0.10), 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes scale-down {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.project-card__content__bottom-row__link-container--wrapper {
+    position: relative;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: end;
+}
+
+.project-card__content__bottom-row__link-container__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card__content__bottom-row__link-container__link:hover {
+    transform: scale(1.1);
+}
+
+.project-card__content__bottom-row__link-container__link__img {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+}
+
+#project-card--one-stop-shop:hover .project-card__content__bottom-row__link-container__link__img {
+    animation: scale-down 1.4s 2;
+}
 
 @media (max-width: 65rem) {
     #work-section{
