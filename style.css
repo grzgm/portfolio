@@ -593,8 +593,8 @@ nav {
 }
 
 .project-card__content__bottom-row__link-container__link {
+    width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 0.75rem;
     text-decoration: none;
