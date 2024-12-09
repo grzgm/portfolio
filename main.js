@@ -174,10 +174,10 @@ function mobileAndTabletCheck() {
   return check;
 };
 
-document.querySelector("#project-card--one-stop-shop").addEventListener("click", (e) => {
-  // Do not open new tab if mobile device or clicked on anchor tag
-  if (!mobileAndTabletCheck() && e.target.tagName !== 'A' && !e.target.closest('a'))
-  {
-    window.open("https://github.com/grzgm/one-stop-shop-ida", "_blank");
-  }
-});
+// document.querySelector("#project-card--one-stop-shop").addEventListener("click", (e) => {
+//   // Do not open new tab if mobile device or clicked on anchor tag
+//   if (!mobileAndTabletCheck() && e.target.tagName !== 'A' && !e.target.closest('a'))
+//   {
+//     window.open("https://github.com/grzgm/one-stop-shop-ida", "_blank");
+//   }
+// });
