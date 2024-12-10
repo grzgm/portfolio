@@ -456,7 +456,7 @@ nav {
     transition: transform 0.5s ease;
 }
 
-@media (hover: hover) {
+@media (pointer: fine) {
     .project-card:hover {
         /* Scale up to create a "pop-out" effect */
         /* Increase shadow to enhance the effect */
