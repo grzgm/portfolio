@@ -88,7 +88,7 @@ projectCardWrappers.forEach((projectCardWrapper) => {
 
     // Calculate brightness level based on cursor position
     const brightnessMax = 1.1;
-    const brightnessMin = 0.80;
+    const brightnessMin = isMobileOrTabletCheck() ? 0.95 : 0.8;
     const brightnessSlope = (brightnessMax - brightnessMin) / (0 - 1);
     const brightness = brightnessMin + brightnessSlope * (y / rect.height - 1);
 
